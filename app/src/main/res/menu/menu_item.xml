@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/app_menu1"
+        android:title="Next page">
+
+    </item>
+    <item
+        android:id="@+id/app_menu2"
+        android:title="Previous page">
+
+    </item>
+    <item
+        android:id="@+id/app_menu3"
+        android:title="Exit">
+
+    </item>
+    <item
+        android:id="@+id/app_menu4"
+        android:title="NO ACTION">
+
+    </item>
+
+</menu>
