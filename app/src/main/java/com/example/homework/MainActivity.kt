@@ -8,8 +8,11 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
+import androidx.appcompat.app.AlertDialog
 import com.example.homework.MainActivity2.Companion.startMainActivity2
 import com.example.homework.MainActivity4.Companion.startMainActivity4
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -19,6 +22,33 @@ class MainActivity : AppCompatActivity() {
         val btnToActivity2 = findViewById<Button>(R.id.btm_to_activity2)
         btnToActivity2.setOnClickListener{
             startActivity(Intent(this, MainActivity2::class.java))
+        }
+        val loginPanel = findViewById<TextInputLayout>(R.id.textLayout1)
+        val passPanel = findViewById<TextInputLayout>(R.id.textLayout2)
+        val login = findViewById<TextInputEditText>(R.id.inputField1)
+        val password = findViewById<TextInputEditText>(R.id.inputField2)
+        val alertDialog = AlertDialog.Builder( this)
+            .setTitle("АЛЕРТ")
+            .setPositiveButton("DA") { _, _ ->
+            }
+            .setNegativeButton("NET") { _, _ ->
+            }
+            .setMessage("логин: ${login.text.toString()} пароль: ${password.text.toString()}")
+
+        val btnLogin = findViewById<Button>(R.id.loginButton)
+        btnLogin.setOnClickListener{
+            if(login.text.isNullOrBlank()){
+                loginPanel.error = "login incorrect"
+            }
+            else if(password.text.isNullOrBlank()){
+                passPanel.error = "password incorrect"
+            }
+
+            else{
+
+                alertDialog.setMessage("логин: ${login.text.toString()} пароль: ${password.text.toString()}").show()
+            }
+
         }
 
         }
