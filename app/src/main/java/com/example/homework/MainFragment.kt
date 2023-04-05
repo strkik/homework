@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.activity.OnBackPressedCallback
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
@@ -33,6 +34,12 @@ class MainFragment : Fragment() {
             .setMessage("ВЫ  зашли успесшно")
             .setPositiveButton("OK"){_,_ -> }
         alertDialog.show()
+        val itemFruitBtn = view.findViewById<Button>(R.id.itemFruitBtn)
+        itemFruitBtn.setOnClickListener(){
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.appContainer, ItemsFragment())
+                .commit()
+        }
     }
 
     }
