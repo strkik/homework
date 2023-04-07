@@ -1,6 +1,5 @@
-package com.example.homework
+package com.example.homework.presentation.view.auth
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -8,19 +7,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.fragment.app.FragmentTransaction
+import com.example.homework.R
+import com.example.homework.databinding.FragmentDetailsBinding
+import com.example.homework.databinding.FragmentLoginBinding
+import com.example.homework.databinding.FragmentMainBinding
+import com.example.homework.presentation.view.MainFragment
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 class LoginFragment : Fragment() {
+    private var _viewBinding: FragmentLoginBinding? = null
+    private val viewBinding get() = _viewBinding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        _viewBinding = FragmentLoginBinding.inflate(inflater)
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        return viewBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -1,9 +1,9 @@
-package com.example.homework
+package com.example.homework.presentation
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.FragmentTransaction
+import com.example.homework.R
+import com.example.homework.presentation.view.auth.LoginFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

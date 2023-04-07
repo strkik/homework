@@ -6,7 +6,9 @@ plugins {
 android {
     namespace 'com.example.homework'
     compileSdk 33
-
+    buildFeatures{
+        viewBinding = true
+    }
     defaultConfig {
         applicationId "com.example.homework"
         minSdk 24
@@ -21,6 +23,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
         }
     }
     compileOptions {

@@ -1,10 +1,10 @@
-package com.example.homework.adapter
+package com.example.homework.presentation.view.items.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homework.R
-import com.example.homework.listener.ItemListener
+import com.example.homework.presentation.view.items.listener.ItemListener
 import com.example.homework.model.ItemsModel
 
 class ItemsAdapter(
